@@ -1,0 +1,9 @@
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\bin\Release\netcoreapp3.1\MDB.Infra.CrossCutting.deps.json
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\bin\Release\netcoreapp3.1\MDB.Infra.CrossCutting.dll
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\bin\Release\netcoreapp3.1\MDB.Infra.CrossCutting.pdb
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.csprojAssemblyReference.cache
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.AssemblyInfoInputs.cache
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.AssemblyInfo.cs
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.dll
+C:\dev\MDBankApi\MDB.Infra.CrossCutting\obj\Release\netcoreapp3.1\MDB.Infra.CrossCutting.pdb

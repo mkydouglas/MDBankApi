@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MDB.Service/1.0.0": {
+        "dependencies": {
+          "MDB.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MDB.Service.dll": {}
+        }
+      },
+      "MDB.Domain/1.0.0": {
+        "runtime": {
+          "MDB.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MDB.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MDB.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

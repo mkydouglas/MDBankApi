@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MDB.Domain\MDB.Domain.csproj" />
+    <ProjectReference Include="..\MDB.Service\MDB.Service.csproj" />
+    <None Include="app.yaml" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+
+</Project>

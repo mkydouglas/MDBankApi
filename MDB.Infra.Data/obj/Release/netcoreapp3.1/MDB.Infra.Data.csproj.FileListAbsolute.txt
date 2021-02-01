@@ -1,0 +1,9 @@
+C:\dev\MDBankApi\MDB.Infra.Data\bin\Release\netcoreapp3.1\MDB.Infra.Data.deps.json
+C:\dev\MDBankApi\MDB.Infra.Data\bin\Release\netcoreapp3.1\MDB.Infra.Data.dll
+C:\dev\MDBankApi\MDB.Infra.Data\bin\Release\netcoreapp3.1\MDB.Infra.Data.pdb
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.csprojAssemblyReference.cache
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.AssemblyInfoInputs.cache
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.AssemblyInfo.cs
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.csproj.CoreCompileInputs.cache
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.dll
+C:\dev\MDBankApi\MDB.Infra.Data\obj\Release\netcoreapp3.1\MDB.Infra.Data.pdb
