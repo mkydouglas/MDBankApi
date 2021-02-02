@@ -14,7 +14,7 @@ namespace MDB.Service.Services
         {
             ServiceResponse<ContaCorrente> serviceResponse = new ServiceResponse<ContaCorrente>();
             
-            contaCorrente.Saldo = Depositar(valor, contaCorrente.Saldo);
+            contaCorrente.Depositar(valor);
 
             serviceResponse.Data = contaCorrente;
             serviceResponse.Message = "Depósito realizado com sucesso!";
@@ -26,7 +26,7 @@ namespace MDB.Service.Services
         {
             ServiceResponse<ContaCorrente> serviceResponse = new ServiceResponse<ContaCorrente>();
 
-            bool retorno = Sacar(valor, contaCorrente);
+            bool retorno = contaCorrente.Sacar(valor);
             if (!retorno)
             {
                 serviceResponse.Data = contaCorrente;
@@ -45,7 +45,7 @@ namespace MDB.Service.Services
         {
             ServiceResponse<ContaCorrente> serviceResponse = new ServiceResponse<ContaCorrente>();
 
-            bool retorno = Transferir(valor, contaTitular, contaDestino);
+            bool retorno = contaTitular.Transferir(valor, contaDestino);
             if(!retorno)
             {
                 serviceResponse.Data = contaTitular;
@@ -58,34 +58,6 @@ namespace MDB.Service.Services
             serviceResponse.Message = "Transferência realizada com sucesso!";
             return serviceResponse;
 
-        }
-
-        private bool Sacar(double valor, ContaCorrente conta)
-        {
-            if(valor > conta.Saldo)
-            {
-                return false;
-            }
-
-            conta.Saldo -= valor;
-            return true;
-        }
-
-        private double Depositar(double valor, double saldo)
-        {
-            return saldo += valor;
-        }
-
-        private bool Transferir(double valor, ContaCorrente contaTitular, ContaCorrente contaDestino)
-        {
-            bool retorno = Sacar(valor, contaTitular);
-            if (!retorno)
-            {
-                return false;
-            }
-
-            contaDestino.Saldo += valor;
-            return true;
         }
     }
 }

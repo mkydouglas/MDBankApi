@@ -10,32 +10,32 @@ namespace MDB.Service.Services
 {
     public class ContaPoupancaService : IContaPoupancaService
     {
-        public async Task<ServiceResponse<ContaPoupanca>> OperacaoDeposito(double valor, ContaPoupanca contaCorrente)
+        public async Task<ServiceResponse<ContaPoupanca>> OperacaoDeposito(double valor, ContaPoupanca contaPoupanca)
         {
             ServiceResponse<ContaPoupanca> serviceResponse = new ServiceResponse<ContaPoupanca>();
-            
-            contaCorrente.Saldo = Depositar(valor, contaCorrente.Saldo);
 
-            serviceResponse.Data = contaCorrente;
+            contaPoupanca.Depositar(valor);
+
+            serviceResponse.Data = contaPoupanca;
             serviceResponse.Message = "Depósito realizado com sucesso!";
 
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<ContaPoupanca>> OperacaoSaque(double valor, ContaPoupanca contaCorrente)
+        public async Task<ServiceResponse<ContaPoupanca>> OperacaoSaque(double valor, ContaPoupanca contaPoupanca)
         {
             ServiceResponse<ContaPoupanca> serviceResponse = new ServiceResponse<ContaPoupanca>();
 
-            bool retorno = Sacar(valor, contaCorrente);
+            bool retorno = contaPoupanca.Sacar(valor);
             if (!retorno)
             {
-                serviceResponse.Data = contaCorrente;
+                serviceResponse.Data = contaPoupanca;
                 serviceResponse.Message = "Não foi possível concluir a transação. Seu saldo é inferior ao valor do saque!";
                 serviceResponse.Success = false;
                 return serviceResponse;
             }
 
-            serviceResponse.Data = contaCorrente;
+            serviceResponse.Data = contaPoupanca;
             serviceResponse.Message = "Saque realizado com sucesso!";
 
             return serviceResponse;
@@ -45,7 +45,7 @@ namespace MDB.Service.Services
         {
             ServiceResponse<ContaPoupanca> serviceResponse = new ServiceResponse<ContaPoupanca>();
 
-            bool retorno = Transferir(valor, contaTitular, contaDestino);
+            bool retorno = contaTitular.Transferir(valor, contaDestino);
             if(!retorno)
             {
                 serviceResponse.Data = contaTitular;
@@ -58,34 +58,6 @@ namespace MDB.Service.Services
             serviceResponse.Message = "Transferência realizada com sucesso!";
             return serviceResponse;
 
-        }
-
-        private bool Sacar(double valor, ContaPoupanca conta)
-        {
-            if(valor > conta.Saldo)
-            {
-                return false;
-            }
-
-            conta.Saldo -= valor;
-            return true;
-        }
-
-        private double Depositar(double valor, double saldo)
-        {
-            return saldo += valor;
-        }
-
-        private bool Transferir(double valor, ContaPoupanca contaTitular, ContaPoupanca contaDestino)
-        {
-            bool retorno = Sacar(valor, contaTitular);
-            if (!retorno)
-            {
-                return false;
-            }
-
-            contaDestino.Saldo += valor;
-            return true;
         }
     }
 }

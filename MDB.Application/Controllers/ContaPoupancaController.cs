@@ -13,14 +13,8 @@ namespace MDB.Application.Controllers
     [ApiController]
     public class ContaPoupancaController : ControllerBase
     {
-        private static ContaPoupanca _contaPoupanca = new ContaPoupanca();
-        private static ContaPoupanca _contaPoupancaDestino = new ContaPoupanca
-        {
-            Titular = "Fulano de Tal",
-            Agencia = 1001,
-            Numero = 987654321,
-            Saldo = 200
-        };
+        private static ContaPoupanca _contaPoupanca = new ContaPoupanca("Jão", 1001, 342423433, 500);
+        private static ContaPoupanca _contaPoupancaDestino = new ContaPoupanca("Fulano de Tal", 1001, 987654321, 200);
         private readonly IContaPoupancaService _contaPoupancaService;
 
         public ContaPoupancaController(IContaPoupancaService contaPoupancaService)

@@ -13,14 +13,9 @@ namespace MDB.Application.Controllers
     [ApiController]
     public class ContaCorrenteController : ControllerBase
     {
-        private static ContaCorrente _contaCorrente = new ContaCorrente();
-        private static ContaCorrente _contaCorrenteDestino = new ContaCorrente
-        {
-            Titular = "Fulano de Tal",
-            Agencia = 1001,
-            Numero = 987654321,
-            Saldo = 200
-        };
+        private static ContaCorrente _contaCorrente = new ContaCorrente("Jão", 1001, 111222333, 500);
+        private static ContaCorrente _contaCorrenteDestino = new ContaCorrente("Fulano de Tal", 1001, 444555666, 200);
+        
         private readonly IContaCorrenteService _contaCorrenteService;
 
         public ContaCorrenteController(IContaCorrenteService contaCorrenteService)
